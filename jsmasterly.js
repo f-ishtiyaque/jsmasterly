@@ -677,6 +677,12 @@ let startUp={
        console.log(`Order will be Deiivered on  ${day} , at ${time} ,in ${address}. Thank You`);
    }
 }
+let newMemberAdded = ['Ganesh' , ...startUp.teams];
+console.log(...newMemberAdded);
+console.log(newMemberAdded);
+let mixedArr = [...newMemberAdded , ...startUp.brances];
+console.log(...mixedArr);
+console.log(mixedArr);
 let startUpp =  startUp.firstorder({
     day :`Thursday`,
     time: `10 A.M`,
@@ -712,7 +718,35 @@ submitArr.addEventListener('click' , function(){
     let first = valueDestructing.split('');
     let second = valueSpreadArray.split('');
     let newArr = [...first , ...second];
-    let [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o] = newArr;
-    [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o] = [o,n,m,l,k,j,i,h,g,f,e,d,c,b,a]
-    console.log(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o);
-})
+    // let [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o] = newArr;
+    // [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o] = [o,n,m,l,k,j,i,h,g,f,e,d,c,b,a]
+    // console.log(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o);
+    console.log(...newArr);
+});
+
+let newResturent = {
+  menu: ['Pasta','Pizza'],
+  order: function(ing1 ,ing2, ing3){
+    console.log(`Your Pasta has ${ing1} , ${ing2} and ${ing3} Ingrediants`);
+  }
+}
+// let orderPastaFun = [prompt(`Ingrediant 1 Value`) , prompt(`Ingrediant 1 Value`) , prompt(`Ingrediant 1 Value`)]
+let orderPastaFun = [`Callcium`,`Grociries`,`Capsicum`]
+
+console.log(orderPastaFun);
+newResturent.order(...orderPastaFun);
+
+// spread operator in objects
+
+let company = {
+    nameOfCompany: `terbium`,
+    place: `Maharastra Mumbai`,
+    owner: `Asif Banatwala`,
+}
+let newadded = {
+    workerWorked: 18,
+    accounten: `yes`,
+}
+let newInfoOfTheCompany = {...company , timings: `10 A.M`,
+yearFounded: 2012,...newadded};
+console.log(newInfoOfTheCompany);
