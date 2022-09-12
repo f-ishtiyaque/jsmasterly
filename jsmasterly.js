@@ -465,21 +465,21 @@
 
 // Scope Chain
 
-function calAge(birthYear){
-    function agePrint() {
-        // console.log(firstName)
-    }
-    agePrint()
-    // console.log(firstName);
-    currentYear = 2010;
-    let age = currentYear - birthYear;
-    return age;
-}
+// function calAge(birthYear){
+//     function agePrint() {
+//         // console.log(firstName)
+//     }
+//     agePrint()
+//     // console.log(firstName);
+//     currentYear = 2010;
+//     let age = currentYear - birthYear;
+//     return age;
+// }
 
-let date = new Date();
-let currentYear = date.getFullYear();
-let firstName = `Ali`;
-let ageYear = calAge(1999);
+// let date = new Date();
+// let currentYear = date.getFullYear();
+// let firstName = `Ali`;
+// let ageYear = calAge(1999);
 // console.log(ageYear);
 
 // Blocked scope
@@ -641,112 +641,191 @@ let count = 0;
 //     let objIterateBySquareBracket = 
 // })
 
-let startUp={
-    nameCompany: `Excellence`,
-    companyWorth: `14L`,
-    brances: ['Delhi', `Mumbai`,`Kasmir`,`Kuala Lampur`],
-    manager : {
-        marketingManager: `Azeem Siddiqui`,
-        projectManager: `Khan Hilal`,
-        website : {
-            frontEnd: `Sameer Shaikh`,
-            backEnd: `Tanmay`,
-            fullStack: `Ali Patel`,
-        },
-    },
-   teams: [`Azeem`,`Sameer`,`Ali`,`Hilal`,`Tanmay`],
-   shopTimings:{
-    Delhi :{
-        openeing : 10,
-        closing: 20,
-    },
-    Kasmir :{
-        openeing : 8,
-        closing: 18,
-    },
-    Mumbai :{
-        openeing : 6,
-        closing: 16,
-    },
-    KualaLampur :{
-        openeing : 4,
-        closing: 14,
-    },
-   },
-   firstorder: function({day,address,time}){
-       console.log(`Order will be Deiivered on  ${day} , at ${time} ,in ${address}. Thank You`);
-   }
-}
-let newMemberAdded = ['Ganesh' , ...startUp.teams];
-console.log(...newMemberAdded);
-console.log(newMemberAdded);
-let mixedArr = [...newMemberAdded , ...startUp.brances];
-console.log(...mixedArr);
-console.log(mixedArr);
-let startUpp =  startUp.firstorder({
-    day :`Thursday`,
-    time: `10 A.M`,
-    address: `Sabistan Garden`,
-}
-);
+// let startUp={
+//     nameCompany: `Excellence`,
+//     companyWorth: `14L`,
+//     brances: ['Delhi', `Mumbai`,`Kasmir`,`Kuala Lampur`],
+//     manager : {
+//         marketingManager: `Azeem Siddiqui`,
+//         projectManager: `Khan Hilal`,
+//         website : {
+//             frontEnd: `Sameer Shaikh`,
+//             backEnd: `Tanmay`,
+//             fullStack: `Ali Patel`,
+//         },
+//     },
+//    teams: [`Azeem`,`Sameer`,`Ali`,`Hilal`,`Tanmay`],
+//    shopTimings:{
+//     Delhi :{
+//         openeing : 10,
+//         closing: 20,
+//     },
+//     Kasmir :{
+//         openeing : 8,
+//         closing: 18,
+//     },
+//     Mumbai :{
+//         openeing : 6,
+//         closing: 16,
+//     },
+//     KualaLampur :{
+//         openeing : 4,
+//         closing: 14,
+//     },
+//    },
+//    firstorder: function({day,address,time}){
+//        console.log(`Order will be Deiivered on  ${day} , at ${time} ,in ${address}. Thank You`);
+//    }
+// }
+// let newMemberAdded = ['Ganesh' , ...startUp.teams];
+// console.log(...newMemberAdded);
+// console.log(newMemberAdded);
+// let mixedArr = [...newMemberAdded , ...startUp.brances];
+// console.log(...mixedArr);
+// console.log(mixedArr);
+// let startUpp =  startUp.firstorder({
+//     day :`Thursday`,
+//     time: `10 A.M`,
+//     address: `Sabistan Garden`,
+// }
+// );
 
 
-console.log(startUpp);
-let {nameCompany, teams} = startUp;
-console.log(nameCompany , teams);
-let [az,be,cc,ss,ds] = teams;
-console.log(az,be,cc,ss,ds);
-// let {nameCompany,companyWorth,brances,manager:{marketingManager,website:{fullStack}},teams:[a]} = startUp;
-// console.log(nameCompany,companyWorth,brances,marketingManager,fullStack,a); 
+// console.log(startUpp);
+// let {nameCompany, teams} = startUp;
+// console.log(nameCompany , teams);
+// let [az,be,cc,ss,ds] = teams;
+// console.log(az,be,cc,ss,ds);
+// // let {nameCompany,companyWorth,brances,manager:{marketingManager,website:{fullStack}},teams:[a]} = startUp;
+// // console.log(nameCompany,companyWorth,brances,marketingManager,fullStack,a); 
  
-// mutating an array
+// // mutating an array
 
-let arrays = [1,2,3,4,5,6];
-let [a,b,c,d,e,f] = arrays;
+// let arrays = [1,2,3,4,5,6];
+// let [a,b,c,d,e,f] = arrays;
 
 
-[a,b,c,d,e,f] = [f,e,d,c,b,a];
+// [a,b,c,d,e,f] = [f,e,d,c,b,a];
 
-console.log(a,b,c,d,e,f);
+// console.log(a,b,c,d,e,f);
 
-let destructing = document.querySelector('.destructing');
-let spreadArray = document.querySelector('.spreadArray');
+// let destructing = document.querySelector('.destructing');
+// let spreadArray = document.querySelector('.spreadArray');
+// let submitArr = document.getElementById('submitArr');
+// submitArr.addEventListener('click' , function(){
+//     let valueDestructing = destructing.value;
+//     let valueSpreadArray = spreadArray.value;
+//     let first = valueDestructing.split('');
+//     let second = valueSpreadArray.split('');
+//     let newArr = [...first , ...second];
+//     console.log([...newArr]);
+//     let [a,b,c,d,...others] = newArr;
+//     // [a,b,c,d,...others] = [...others,d,c,b,a]
+//     // console.log(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o);
+//     console.log([...others,a,b,c,d])
+// });
+
+// let newResturent = {
+//   menu: ['Pasta','Pizza'],
+//   order: function(ing1 ,ing2, ing3){
+//     console.log(`Your Pasta has ${ing1} , ${ing2} and ${ing3} Ingrediants`);
+//   }
+// }
+// // let orderPastaFun = [prompt(`Ingrediant 1 Value`) , prompt(`Ingrediant 1 Value`) , prompt(`Ingrediant 1 Value`)]
+// let orderPastaFun = [`Callcium`,`Grociries`,`Capsicum`]
+
+// console.log(orderPastaFun);
+// newResturent.order(...orderPastaFun);
+
+// // spread operator in objects
+
+// let company = {
+//     nameOfCompany: `terbium`,
+//     place: `Maharastra Mumbai`,
+//     owner: `Asif Banatwala`,
+// }
+// let newadded = {
+//     workerWorked: 18,
+//     accounten: `yes`,
+// }
+// let newInfoOfTheCompany = {...company , timings: `10 A.M`,
+// yearFounded: 2012,...newadded};
+// console.log(newInfoOfTheCompany);
+
+// Rest Pattern
+// let arrRest = [1,2,3,4,5,6,7];
+// let arrSpread = [8,9,10,11,12,13,14];
+
+// let [ad,bs,...others2] = [...arrRest];
+// console.log(ad,bs,others2);
+// let newestArray = [...arrRest,...arrSpread];
+// console.log(...newestArray);
+
+
+
+
+
+
+// console.log(this);
+// function vipul(){
+
+//     let thisArrow = ()=>{
+//         console.log(this);
+//     }
+//     thisArrow();
+//     console.log(this);
+// }
+// vipul();
+
+// let obj = {
+//     nameing: ` Ali`,
+//     cal : function(){
+//         console.log(this)
+//     },
+//     cal2: ()=>{
+//         console.log(this)
+//     }
+// }
+
+// obj.cal();
+// obj.cal2();
+
+// Rest Parameters for Passing Many Parametes in an function
+// let restPat = function(...a){
+//     let sum = 0;
+//     for(let i=0 ; i < a.length-1 ; i++ ){
+//         sum += a[i];
+//     }
+//     console.log(sum);
+// }
+
+// let abcdef = [1,2,3,4,5,6,7,8,9,10];
+// let abcde = [1,2,3,4,5,6,7];
+
+// let abcd = [1,2,3,4,5];
+// restPat(...abcdef);
+// restPat(...abcde);
+// restPat(...abcd);
+
+
+// console.log(valueArray.length);
+// let sum = [];
+// for (let i = 0; i < valueArray.length; i++) {
+//     sum.push(`${valueArray[i]}${valueArray[i]}`);
+// }
+// console.log(sum);
+// let [...a] = [...sum]
+// console.log(...a);
+
+let dobuleArr = document.querySelector('.doubleElement');
 let submitArr = document.getElementById('submitArr');
 submitArr.addEventListener('click' , function(){
-    let valueDestructing = destructing.value;
-    let valueSpreadArray = spreadArray.value;
-    let first = valueDestructing.split('');
-    let second = valueSpreadArray.split('');
-    let newArr = [...first , ...second];
-    // let [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o] = newArr;
-    // [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o] = [o,n,m,l,k,j,i,h,g,f,e,d,c,b,a]
-    // console.log(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o);
-    console.log(...newArr);
+    let valueArray = dobuleArr.value.toLowerCase();
+    let sum = 0;
+    for (let i = 0; i < valueArray.length; i++) {
+        if(valueArray[i] == 'a' || valueArray[i] == 'e' || valueArray[i] == 'i' || valueArray[i] == 'o' || valueArray[i] == 'u'){
+            sum++;
+        }
+    }
+    console.log(sum)
 });
-
-let newResturent = {
-  menu: ['Pasta','Pizza'],
-  order: function(ing1 ,ing2, ing3){
-    console.log(`Your Pasta has ${ing1} , ${ing2} and ${ing3} Ingrediants`);
-  }
-}
-// let orderPastaFun = [prompt(`Ingrediant 1 Value`) , prompt(`Ingrediant 1 Value`) , prompt(`Ingrediant 1 Value`)]
-let orderPastaFun = [`Callcium`,`Grociries`,`Capsicum`]
-
-console.log(orderPastaFun);
-newResturent.order(...orderPastaFun);
-
-// spread operator in objects
-
-let company = {
-    nameOfCompany: `terbium`,
-    place: `Maharastra Mumbai`,
-    owner: `Asif Banatwala`,
-}
-let newadded = {
-    workerWorked: 18,
-    accounten: `yes`,
-}
-let newInfoOfTheCompany = {...company , timings: `10 A.M`,
-yearFounded: 2012,...newadded};
-console.log(newInfoOfTheCompany);
