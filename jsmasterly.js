@@ -1,5 +1,4 @@
 'use strict'
-// console.log("Hello");
 
 
 // let dolphins = 96 + 108 + 89;
@@ -739,11 +738,11 @@ let count = 0;
 
 // // spread operator in objects
 
-// let company = {
-//     nameOfCompany: `terbium`,
-//     place: `Maharastra Mumbai`,
-//     owner: `Asif Banatwala`,
-// }
+let company = {
+    nameOfCompany: `terbium`,
+    place: `Maharastra Mumbai`,
+    owner: `Asif Banatwala`,
+}
 // let newadded = {
 //     workerWorked: 18,
 //     accounten: `yes`,
@@ -817,10 +816,10 @@ let count = 0;
 // let [...a] = [...sum]
 // console.log(...a);
 
-let dobuleArr = document.querySelector('.doubleElement');
+let doubleArr = document.querySelector('.doubleElement');
 let submitArr = document.getElementById('submitArr');
 submitArr.addEventListener('click' , function(){
-    let valueArray = dobuleArr.value.toLowerCase();
+    let valueArray = doubleArr.value.toLowerCase();
     let sum = 0;
     for (let i = 0; i < valueArray.length; i++) {
         if(valueArray[i] == 'a' || valueArray[i] == 'e' || valueArray[i] == 'i' || valueArray[i] == 'o' || valueArray[i] == 'u'){
@@ -829,3 +828,27 @@ submitArr.addEventListener('click' , function(){
     }
     console.log(sum)
 });
+console.log(undefined || '' || null || 'hello');  // Short Circuit
+
+// company.serverUsed = `S3 Bucket`;
+
+let usedServer = company.serverUsed || `Amazon`;
+console.log(usedServer);
+
+// Here if company.serverUsed is a truety false rather than un defined than it will be printed if it is a falsy value if wont print and will go to some other true value.
+let marriage = {
+   groom: `Teddy`,
+   bride: `Panda`,
+}
+let marriage2 = {
+    groom: `Teddy`,
+}
+
+//  For AND operator in Object it goes to false value. If any of that has false value it will return that unlike Or Operator.
+marriage2.bride = `Natsha`;
+marriage.bride = `Neha`;
+const marriageObj = marriage2.bride || marriage2.bride;
+const marriageObj2 = marriage.bride || marriage.bride;
+
+console.log(marriage2);   
+console.log(marriageObj2);  
